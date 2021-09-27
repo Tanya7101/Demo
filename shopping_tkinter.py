@@ -61,7 +61,11 @@ class Login():
                 else:
                     tkinter.messagebox.showerror('loginerr', '密碼錯誤')
             else:
-                continue #錯誤box
+                base = True
+            return self.check(base)
+    def check(self, base):
+        if base:
+            tkinter.messagebox.showerror('loginerr', '帳號錯誤')
 
 class Create():
     def __init__(self, master):
